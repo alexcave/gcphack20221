@@ -1,0 +1,51 @@
+body {
+    background-color: #FFF8F6;
+    font-family: Inter sans-serif;
+    font-style: normal;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 100px;
+    max-width: 100vw;
+    background-image: linear-gradient(147deg, #FFF8F6 0%, #ffd6cc 100%);
+
+}
+
+.user-interact {
+    background: #ffffff;
+}
+
+#upload {
+    opacity: 0;
+}
+
+#upload-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.image-area {
+    border: 2px dashed rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    position: relative;
+}
+
+.image-area::before {
+    content: 'Your image';
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.image-area img {
+    z-index: 2;
+    position: relative;
+}
