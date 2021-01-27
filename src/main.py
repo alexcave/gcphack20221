@@ -23,6 +23,10 @@ def index():
     return render_template('index.html')
 
 
+def show_video():
+    return render_template('show_video.html')
+
+
 # @app.route('/upload', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST' and 'photo' in request.files:
@@ -65,6 +69,7 @@ def upload_file():
 
 
 app.add_url_rule('/', 'index', index)
+app.add_url_rule('/show-video', 'show_video', show_video, methods=['GET', 'POST'])
 app.add_url_rule('/upload', 'upload', upload_file, methods=['GET', 'POST'])
 
 if __name__ == '__main__':
