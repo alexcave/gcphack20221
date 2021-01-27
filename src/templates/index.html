@@ -12,19 +12,18 @@
 
 {% block content %}
 
-<div class="container-fluid align-items-left">
-
+<div class="container-fluid text-center">
     <div class="row content mt-5 mb-1 ml-3">
-        <div class="col-md-4" id="covidCount">
+        <div class="col-md-12" id="covidCount">
             <h1 id="covidNumberTitle">
-                Make an animated avatar of yourself and watch it speak!
+                Watch Captain America and The Rock speak the text your provide!
             </h1>
         </div>
     </div>
 
 </div>
 
-<div class="container-fluid text-center align-items-center user-interact rounded mx-5 w-75 h-75">
+<div class="container-fluid text-center align-items-center user-interact rounded mx-auto w-75 h-75">
     <div class="row content my-5">
         <div class="col-md-8 align-items-left my-3">
             <form method=POST enctype=multipart/form-data action="{{ url_for('upload') }}"
@@ -36,15 +35,13 @@
                     </h4>
 
                     <div class="row py-4">
-                        <div class="col-md-4">
-                            <img src="{{ url_for('static', filename='images/generic-placeholder.jpg') }}" class="rounded img-thumbnail">
+                        <div class="col-md-6">
+                            <img src="{{ url_for('static', filename='images/captain.jpg') }}" class="rounded img-thumbnail">
                         </div>
-                        <div class="col-md-4">
-                            <img src="{{ url_for('static', filename='images/generic-placeholder.jpg') }}" class="rounded img-thumbnail">
+                        <div class="col-md-6">
+                            <img src="{{ url_for('static', filename='images/dwayne3.jpg') }}" class="rounded img-thumbnail">
                         </div>
-                        <div class="col-md-4">
-                            <img src="{{ url_for('static', filename='images/generic-placeholder.jpg') }}" class="rounded img-thumbnail">
-                        </div>
+
 
 
                         <!-- Upload image input-->
@@ -97,7 +94,7 @@
 
                 </div>
             </form>
-        </div>meet.google.com/rmx-znsf-pro
+        </div>
         <div class="col-md-4 align-items-center" style="align-self: center">
             <!-- Uploaded image area-->
             <div class="image-area my-4">
