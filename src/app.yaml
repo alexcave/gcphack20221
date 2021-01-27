@@ -8,10 +8,10 @@ env_variables:
 handlers:
 # Matches requests to /images/... to files in static/images/...
 - url: /images
-  static_dir: flask/static/images
+  static_dir: static/images
 - url: /css
-  static_dir: flask/static/css
+  static_dir: static/css
 - url: /js
-  static_dir: flask/static/js
+  static_dir: static/js
 - url: .*
-  script: flask/main.py
+  script: auto
