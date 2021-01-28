@@ -52,4 +52,4 @@ app.add_url_rule('/upload', 'upload', send_request, methods=['GET', 'POST'])
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(threaded=True, port=8080)
+    app.run(threaded=True, port=5001)
