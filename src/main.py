@@ -28,6 +28,10 @@ def show_video():
     return render_template('show_video.html', char=request.args.get('char'), vid_url=request.args.get('vid_url'))
 
 
+def examples():
+    return render_template('examples.html')
+
+
 def send_request():
     if request.method == 'POST':
         print(request.form.get('email'))
@@ -52,7 +56,8 @@ def send_request():
 app.add_url_rule('/', 'index', index)
 app.add_url_rule('/show-video', 'show_video', show_video, methods=['GET', 'POST'])
 app.add_url_rule('/upload', 'upload', send_request, methods=['GET', 'POST'])
+app.add_url_rule('/examples', 'examples', examples)
 
 if __name__ == '__main__':
-    app.debug = False
+    app.debug = True
     app.run(threaded=True, port=5001)
