@@ -11,7 +11,7 @@
     <div class="row content mt-5 mb-1 ml-3">
         <div class="col-md-12" id="covidCount">
             <h1 id="covidNumberTitle">
-                Here is your video
+                Look, it's {{ char.replace('_', ' ').title() + "!" if char else "your avatar!" }}
             </h1>
         </div>
     </div>

@@ -24,7 +24,7 @@ def index():
 
 
 def show_video():
-    return render_template('show_video.html')
+    return render_template('show_video.html', char=request.args.get('char'))
 
 
 # @app.route('/upload', methods=['GET', 'POST'])
@@ -43,28 +43,17 @@ def upload():
 
 def upload_file():
     if request.method == 'POST':
-        print(request.files)
         print(request.form.get('email'))
         print(request.form.get('text-to-speak'))
+        print(request.form.get('img-select'))
         email = request.form.get('email')
         text_to_speak = request.form.get('text-to-speak')
-        # check if the post request has the file part
-        if 'photo' not in request.files:
-            print('No photo part')
-            return redirect(request.url)
-        file = request.files['photo']
-        print(file)
-        # if user does not select file, browser also
-        # submit an empty part without filename
-        if file.filename == '':
-            print('No selected file')
-            return redirect(request.url)
-        if file and allowed_file(file.filename):
-            print('file')
-            filename = secure_filename(file.filename)
-            print(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('index'))
+        img = request.form.get('img-select')
+
+        if email and text_to_speak and img:
+            # Send the model request here
+            return redirect(url_for('show_video', char=img))
+
     return render_template('index.html')
 
 

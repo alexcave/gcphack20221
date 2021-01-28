@@ -26,42 +26,24 @@
 <div class="container-fluid text-center align-items-center user-interact rounded mx-auto w-75 h-75">
     <div class="row content my-5">
         <div class="col-md-10 align-items-left my-3 mx-auto">
-            <form method=POST enctype=multipart/form-data action="{{ url_for('show_video') }}"
+            <form method=POST enctype=multipart/form-data action="{{ url_for('upload') }}"
                   class="input-group mb-3 px-2 py-2 rounded bg-white">
                 <div class="form-group col-md-12 align-items-left text-left ml-3">
                     <h4>
                         <i class="far fa-image"></i>
                         CHOOSE IMAGE
                     </h4>
-                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                        <div class="btn-group mr-2" role="group" aria-label="First group">
-                            <button type="button" class="btn btn-secondary" id="captain_america"
-                                    style="background: none; border: none;">
-                                <img src="{{ url_for('static', filename='images/captain.jpg') }}"
-                                     class="rounded img-thumbnail">
-                            </button>
-                        </div>
-                        <div class="btn-group mr-2" role="group" aria-label="Second group">
-                            <button type="button" class="btn btn-secondary" id="the_rock"
-                                    style="background: none; border: none;">
-                                <img src="{{ url_for('static', filename='images/dwayne3.jpg') }}"
-                                     class="rounded img-thumbnail">
-                            </button>
+                    <label>
+                        <input type="radio" name="img-select" value="captain_america" checked>
+                        <img src="{{ url_for('static', filename='images/captain.jpg') }}"
+                             class="rounded img-thumbnail">
+                    </label>
 
-                        </div>
-
-                    </div>
-                    <!-- Upload image input-->
-
-                    <!--                        <input id="upload" type="file" name="photo" onchange="readURL(this);"-->
-                    <!--                               class="form-control border-0">-->
-                    <!--                        <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose-->
-                    <!--                            file</label>-->
-                    <!--                        <div class="input-group-append">-->
-                    <!--                            <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i-->
-                    <!--                                    class="fa fa-cloud-upload mr-2 text-muted"></i><small-->
-                    <!--                                    class="text-uppercase font-weight-bold text-muted">Choose file</small></label>-->
-                    <!--                        </div>-->
+                    <label>
+                        <input type="radio" name="img-select" value="the_rock">
+                        <img src="{{ url_for('static', filename='images/dwayne3.jpg') }}"
+                             class="rounded img-thumbnail">
+                    </label>
                 </div>
                 <div class="form-group col-md-12 align-items-left text-left ml-3">
                     <h4>
