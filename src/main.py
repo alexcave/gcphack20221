@@ -51,5 +51,5 @@ app.add_url_rule('/show-video', 'show_video', show_video, methods=['GET', 'POST'
 app.add_url_rule('/upload', 'upload', send_request, methods=['GET', 'POST'])
 
 if __name__ == '__main__':
-    app.debug = True
+    app.debug = False
     app.run(threaded=True, port=5001)
