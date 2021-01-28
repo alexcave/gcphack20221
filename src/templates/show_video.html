@@ -12,7 +12,6 @@
         <div class="col-md-12" id="covidCount">
             <h1 id="covidNumberTitle">
                 Look, it's {{ char.replace('_', ' ').title() + "!" if char else "your avatar!" }}
-                {{ vid_url }}
             </h1>
         </div>
     </div>
@@ -21,7 +20,7 @@
 <div class="container-fluid text-center align-items-center user-interact rounded mx-auto w-75 h-75">
     <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item"
-                src="https://storage.googleapis.com/lbghack2021team2.appspot.com/captain_demo.mp4"
+                src="{{ vid_url }}"
                 allowfullscreen></iframe>
     </div>
 </div>

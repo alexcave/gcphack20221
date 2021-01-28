@@ -37,7 +37,10 @@ def send_request():
         text_to_speak = request.form.get('text-to-speak')
         img = request.form.get('img-select')
         vid_uuid = uuid.uuid4()
-        vid_url = 'test'
+        if img == 'captain_america':
+            vid_url = 'https://storage.googleapis.com/lbghack2021team2.appspot.com/cap_america_demo.mp4'
+        else:
+            vid_url = 'https://storage.googleapis.com/lbghack2021team2.appspot.com/rock_demo.mp4'
 
         if email and text_to_speak and img:
             # Send the model request here
